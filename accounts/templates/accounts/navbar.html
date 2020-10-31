@@ -16,6 +16,8 @@
         {% if request.user.is_staff %}
         <a class="nav-item nav-link active" href="{%  url 'home' %}">Dashboard</a>
         <a class="nav-item nav-link" href="{%  url 'products' %}">Products</a>
+        {% else %}
+        <a class="nav-item nav-link" href="{%  url 'account' %}">Settings</a>
         {% endif %}
       </div>
     </div>
