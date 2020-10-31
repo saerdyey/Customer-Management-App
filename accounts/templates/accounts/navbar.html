@@ -13,8 +13,10 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
+        {% if request.user.is_staff %}
         <a class="nav-item nav-link active" href="{%  url 'home' %}">Dashboard</a>
         <a class="nav-item nav-link" href="{%  url 'products' %}">Products</a>
+        {% endif %}
       </div>
     </div>
 
